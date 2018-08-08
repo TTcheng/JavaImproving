@@ -1,9 +1,11 @@
 package com.java.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by Wangchuncheng on 2018/8/3 14:04
  */
-public class Person {
+public class Person implements Comparable, Serializable {
     private String name;
     private Integer age;
 
@@ -19,12 +21,31 @@ public class Person {
         System.out.println("Hello I'm " + name);
     }
 
+
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return Integer.compare(this.getAge(), ((Person) o).getAge());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Person annother = (Person) obj;
+        if (this.name.equals(annother.getName())) {
+            return this.age.equals(annother.getAge());
+        } else return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode() + this.age.hashCode();
     }
 
     public String getName() {
