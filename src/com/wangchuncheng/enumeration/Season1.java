@@ -10,7 +10,7 @@ package com.wangchuncheng.enumeration;
  * 3、如何实现接口
  */
 public enum Season1 implements Info{
-    SPRING("Spring", "春暖花开"){
+    SPRING("Spring", "春暖花开"){//构造枚举对象
         /**
          * 各自实现不同的接口方法
          */
