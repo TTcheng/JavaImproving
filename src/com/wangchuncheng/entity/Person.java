@@ -7,9 +7,16 @@ public class Person {
     private String name;
     private Integer age;
 
+    public Person() {
+    }
+
     public Person(String name, Integer age) {
         this.name = name;
         this.age = age;
+    }
+
+    public void sayHello() {
+        System.out.println("Hello I'm " + name);
     }
 
     @Override
