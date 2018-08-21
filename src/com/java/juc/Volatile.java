@@ -1,4 +1,4 @@
-package com.wangchuncheng;
+package com.java.juc;
 
 /**********************************************************************************************************************
  * Created by WangChuncheng on 2018/7/7 13:33.
@@ -40,7 +40,7 @@ class ThreadDemo implements Runnable {
         flag = true;
     }
 
-    public boolean isFlag() {
+    boolean isFlag() {
         return flag;
     }
 }

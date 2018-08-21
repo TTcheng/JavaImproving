@@ -19,7 +19,7 @@ import java.util.TreeMap;
 public class MapImpls {
     @Test
     public void testHashMap() {
-        HashMap<String, Object> hashMap = new HashMap<String, Object>();
+        HashMap<String, Object> hashMap = new HashMap<>();
         //添加
         hashMap.put("user", new User("1001", "Jesse"));
         hashMap.put("class", MapImpls.class);
@@ -50,7 +50,7 @@ public class MapImpls {
 
     @Test
     public void testTreeMap() {
-        Map<Object, Object> map = new TreeMap<Object, Object>();
+        Map<Object, Object> map = new TreeMap<>();
         map.put("user1", new User("1001", "Jesse"));
         map.put(12, "Jessie");
         map.put("user3", new User("1003", "Jessica"));

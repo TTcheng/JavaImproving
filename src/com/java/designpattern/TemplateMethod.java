@@ -16,7 +16,7 @@ abstract class Template {
     /**
      * 计算code方法执行时间
      */
-    protected void spendtime() {
+    void spendtime() {
         long startTime = System.currentTimeMillis();
         code();
         long endTime = System.currentTimeMillis();

@@ -8,7 +8,7 @@ package com.java.designpattern.proxy;
 public class ProxyObject implements Proxable {
     private Proxable obj;
 
-    public ProxyObject(Proxable obj) {
+    ProxyObject(Proxable obj) {
         this.obj = obj;
     }
 

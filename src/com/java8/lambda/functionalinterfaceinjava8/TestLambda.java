@@ -32,7 +32,7 @@ public class TestLambda {
         happy(1000.0,(m)-> System.out.println("此次消费" + m + "元"));
     }
 
-    public void happy(Double monony, Consumer<Double> consumer){
+    private void happy(Double monony, Consumer<Double> consumer){
         consumer.accept(monony);
     }
 
@@ -43,7 +43,7 @@ public class TestLambda {
     }
 
     //产生指定个数的整数，并放入集合中
-    public List<Integer> getNumList(int num, Supplier<Integer> supplier) {
+    private List<Integer> getNumList(int num, Supplier<Integer> supplier) {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < num; i++) {
             list.add(supplier.get());
@@ -55,12 +55,12 @@ public class TestLambda {
     public void testFunction(){
         String oldStr = "\t\t\t 牛逼";
         System.out.println("oldStr = " + oldStr);
-        String newStr = strHandler(oldStr,s -> s.trim());
+        String newStr = strHandler(oldStr, String::trim);
         System.out.println("newStr = " + newStr);
     }
 
     //用于处理字符串
-    public String strHandler(String s, Function<String, String> function) {
+    private String strHandler(String s, Function<String, String> function) {
         return function.apply(s);
     }
 
@@ -76,7 +76,7 @@ public class TestLambda {
     }
 
     //过滤字符串
-    public List<String> filterStr(List<String> list, Predicate<String> predicate) {
+    private List<String> filterStr(List<String> list, Predicate<String> predicate) {
         List<String> strlist = new ArrayList<String>();
         for (String s : list) {
             if (predicate.test(s)) {

@@ -88,7 +88,7 @@ public class TestStreamAPI {
                 .filter(employee -> Status.AVAILABLE.equals(employee.getStatus()))
                 .findAny();
         System.out.println("availableEmp = " + availableEmp);
-        Optional<Employee> maxSalaryEmp = employeeList.stream().max(Comparator.comparingDouble(e -> e.getSalary()));
+        Optional<Employee> maxSalaryEmp = employeeList.stream().max(Comparator.comparingDouble(Employee::getSalary));
     }
 
     @Test
@@ -131,7 +131,7 @@ public class TestStreamAPI {
         ages.forEach(System.out::println);
         names.forEach(System.out::println);
         //将所有字符转化为大写
-        Arrays.stream(new String[]{"aaa", "bbb", "ccc"}).map(x -> x.toUpperCase()).forEach(System.out::println);
+        Arrays.stream(new String[]{"aaa", "bbb", "ccc"}).map(String::toUpperCase).forEach(System.out::println);
     }
 
     @Test
@@ -144,7 +144,7 @@ public class TestStreamAPI {
                 .forEach(System.out::println);//输出字母
     }
 
-    public Stream<Character> toUpperCharsStream(String s) {
+    private Stream<Character> toUpperCharsStream(String s) {
         List<Character> list = new ArrayList<>();
         for (Character c : s.toCharArray()) {
             list.add(c >= 97 && c <= 122 ? (char) (c - 32) : c);

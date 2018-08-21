@@ -1,4 +1,4 @@
-package com.wangchuncheng;
+package com.java.juc;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -42,7 +42,7 @@ public class Atomic {
 class AtomicSatisfied implements Runnable {
     private AtomicInteger num = new AtomicInteger(0);
 
-    public int getNum() {
+    private int getNum() {
         return num.getAndAdd(1);
     }
 
@@ -58,7 +58,7 @@ class AtomicSatisfied implements Runnable {
 class AtomicUnsatisfied implements Runnable {
     private int num = 0;
 
-    public int getNum() {
+    private int getNum() {
         return num++;
     }
 

@@ -10,7 +10,7 @@ package com.java.standard;
 public class CodeBlocks {
 
     //显示的初始化
-    public String name = "Jesse";
+    private String name;
     {
         name = "jessica";
         System.out.println("CodeBlocks.instance initializer 非静态代码块");
@@ -20,7 +20,7 @@ public class CodeBlocks {
     }
 
     //构造方法是创建对象的最后一道关口
-    public CodeBlocks() {
+    private CodeBlocks() {
         System.out.println("CodeBlocks.CodeBlocks 构造方法");
     }
 

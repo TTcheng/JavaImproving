@@ -4,6 +4,7 @@ import com.java.entity.Dog;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -12,17 +13,13 @@ import java.util.List;
  */
 public class TestGeneric {
     //泛型方法
-    public <F> List<F> toList(F[] array) {
-        List<F> list = new ArrayList<F>();
-        for (F item : array) {
-            list.add(item);
-        }
-        return list;
+    private <F> List<F> toList(F[] array) {
+        return new ArrayList<>(Arrays.asList(array));
     }
 
     @Test
     public void testGenericClass() {
-        Person<Dog> person = new Person<Dog>("Jesse", 31);
+        Person<Dog> person = new Person<>("Jesse", 31);
         Dog dog = new Dog("Xiaohua");
         person.setProperty(dog);
         System.out.println("person = " + person);
@@ -35,8 +32,8 @@ public class TestGeneric {
 
         List nameList = toList(names);
         List numList = toList(nums);
-        System.out.println("names = " + names);
-        System.out.println("nums = " + nums);
+        System.out.println("names = " + Arrays.toString(names));
+        System.out.println("nums = " + Arrays.toString(nums));
         System.out.println("nameList = " + nameList);
         System.out.println("numList = " + numList);
     }

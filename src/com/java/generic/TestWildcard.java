@@ -25,7 +25,7 @@ public class TestWildcard {
         show(stringList);
     }
 
-    public void show(List<?> list) {
+    private void show(List<?> list) {
         System.out.println("list = " + list);
     }
 }
