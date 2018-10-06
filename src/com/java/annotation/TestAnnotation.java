@@ -50,7 +50,7 @@ public class TestAnnotation {
         System.out.println("这是过时的方法");
     }
 
-    public void printDate() {
+    private void printDate() {
         Date date = new Date();
         System.out.println("date = " + date);
     }

@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class UsingCollections {
 
-    List list = new ArrayList<String>();
+    private List<String> list = new ArrayList<>();
 
     {
         list.add("Hello");

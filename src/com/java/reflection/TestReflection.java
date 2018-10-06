@@ -59,13 +59,13 @@ public class TestReflection {
      */
     @Test
     public void testReflection() throws IllegalAccessException, InstantiationException, NoSuchFieldException, NoSuchMethodException, InvocationTargetException {
-        /**
-         * 创建对象
+        /*
+          创建对象
          */
         Class<Person> aClass = Person.class;
         Person person = aClass.newInstance();
-        /**
-         * 运行时操作属性
+        /*
+          运行时操作属性
          */
         //1.保留封装性，通过反射获取属性，然后赋值.需要属性为public
         /*
@@ -82,8 +82,8 @@ public class TestReflection {
         person.setName("Jesse");
         person.sayHello();
 
-        /**
-         * 运行时操作方法
+        /*
+          运行时操作方法
          */
         Method setName = aClass.getMethod("setName", String.class);//获取有参方法
         setName.invoke(person, "Jessica");
@@ -91,8 +91,8 @@ public class TestReflection {
         Object returnValue = sayHello.invoke(person);//执行
 //        Object returnValue = method.invoke(Person.class,args);//执行静态方法
 
-        /**
-         * 获取构造器
+        /*
+          获取构造器
          */
         Constructor[] constructors = aClass.getConstructors();
         for (Constructor constructor : constructors) {
@@ -103,8 +103,8 @@ public class TestReflection {
         Person tom = (Person) constructor.newInstance("Tom",21);
         System.out.println("tom = " + tom);
 
-        /**
-         * 获取其他结构
+        /*
+          获取其他结构
          */
         Class<? super Person> superclass = aClass.getSuperclass();//获取父类
         System.out.println("superclass = " + superclass);

@@ -5,9 +5,9 @@ import java.io.Serializable;
 /**
  * Created by Wangchuncheng on 2018/8/3 14:04
  */
-public class Person implements Comparable, Serializable {
-    private String name;
-    private Integer age;
+public class Person implements Comparable, Serializable, Cloneable {
+    protected String name;
+    protected Integer age;
 
     public Person() {
     }
@@ -37,10 +37,13 @@ public class Person implements Comparable, Serializable {
 
     @Override
     public boolean equals(Object obj) {
-        Person annother = (Person) obj;
-        if (this.name.equals(annother.getName())) {
-            return this.age.equals(annother.getAge());
-        } else return false;
+        if (obj instanceof Person) {
+            Person annother = (Person) obj;
+            if (this.name.equals(annother.getName())) {
+                return this.age.equals(annother.getAge());
+            }
+        }
+        return false;
     }
 
     @Override

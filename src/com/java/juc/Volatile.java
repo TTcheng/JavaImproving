@@ -40,7 +40,7 @@ class ThreadDemo implements Runnable {
         flag = true;
     }
 
-    public boolean isFlag() {
+    boolean isFlag() {
         return flag;
     }
 }

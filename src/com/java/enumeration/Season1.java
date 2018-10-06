@@ -1,10 +1,6 @@
 package com.java.enumeration;
 
 /**
- * Created by Wangchuncheng on 2018/8/8 9:28
- */
-
-/**
  * 1、使用enum关键字定义枚举
  * 2、几个常用方法values(),valueOf()
  * 3、如何实现接口
