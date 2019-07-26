@@ -1,3 +1,7 @@
+### IDEA
 .idea/
-out/
+/out/
 JavaImproving.iml
+
+### Maven
+/target/

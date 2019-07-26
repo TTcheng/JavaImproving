@@ -3,6 +3,7 @@ package com.java8.annotation;
 import org.junit.Test;
 
 import java.lang.reflect.Method;
+import java.util.Arrays;
 
 /**
  * Created by Wangchuncheng on 2018/8/21 10:11
@@ -22,5 +23,15 @@ public class TestAnnotation {
         for (MyAnnotation ma : mas) {
             System.out.println("ma = " + ma.value());
         }
+    }
+
+    @Test
+    public void testMyAnnonation(){
+        Class<MyAnnotation> annotationClass = MyAnnotation.class;
+        String annotationClassName = annotationClass.getName();
+        System.out.println("annotationClassName = " + annotationClassName);
+
+        Method[] methods = annotationClass.getMethods();
+        Arrays.stream(methods).forEach((method)-> System.out.println(method.getName()));
     }
 }

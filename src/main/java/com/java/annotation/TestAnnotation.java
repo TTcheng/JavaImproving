@@ -24,6 +24,7 @@ import java.util.Date;
  * @Documented
  * @Inherited
  */
+@SuppressWarnings(value = "all")
 public class TestAnnotation {
     @Test
     public void testBasicAnnotation() {

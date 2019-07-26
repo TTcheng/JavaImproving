@@ -6,10 +6,10 @@ import org.junit.Test;
  * Created by Wangchuncheng on 2018/8/13 15:16
  */
 public class TestLambda {
-    private Operational<Long, String> add = (x, y) -> "result = " + String.valueOf(x + y);
-    private Operational<Long, String> multiply = (x, y) -> "result = " + String.valueOf(x * y);
-    private Operational<Long, String> divide = (x, y) -> "result = " + String.valueOf(x / y);
-    private Operational<Long, String> subtract = (x, y) -> "result = " + String.valueOf(x - y);
+    private Operational<Long, String> add = (x, y) -> "result = " + (x + y);
+    private Operational<Long, String> multiply = (x, y) -> "result = " + x * y;
+    private Operational<Long, String> divide = (x, y) -> "result = " + x / y;
+    private Operational<Long, String> subtract = (x, y) -> "result = " + (x - y);
 
     @Test
     public void testOperations() {

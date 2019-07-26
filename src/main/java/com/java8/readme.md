@@ -126,7 +126,7 @@ public class TestMethodReference {
 ### 2、创建Stream
 **创建Stream** : 
 
-`CollectionImpls.stream()/parallelStream() `、 `Arrays.Stream()`、`Stream.of()`、`无限流stream.generate()/iterate()`
+`CollectionImpls.stream()/parallelStream() `、 `Arrays.Stream()`、`Stream.of()`、`无限流stream.generate()/iterate()` 、`string.chars()`
 
 ```java
 public class TestStreamAPI {

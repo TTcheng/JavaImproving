@@ -38,7 +38,7 @@ public class TestLambda {
             System.out.println("函数式接口");
             return x - y;
         };*/
-        Comparator<Integer> c = (x,y) -> x-y;
+        Comparator<Integer> c = (x, y ) -> x - y;
         Integer result = c.compare(1, 2);
         System.out.println(result);
     }
